@@ -20,30 +20,38 @@
                 <form action="">
                     <div>
                         <label for="score">Enter Score</label>
-                        <input id="score" type="number" placeholder="e.g 50">
+                        <input id="score" type="number" value="" placeholder="e.g 50">
                     </div>
                     <div>
-                        <button>Compute Grade</button>
+                        <button type="button" onclick="getScrore()">Compute Grade</button>
                     </div>
                 </form>
             </div>
-            <div class="col"></div>
+            <div class="col">
+                <p id="ans"></p>
+            </div>
         </div>
     </div>
     <script>
-        let score = document.getElementById('score')
-        if(score < 50){
-            document.write("F")
+        let score = 0
+        function getScrore(){
+            score = document.getElementById('score').value
+            console.log(typeof score);
+
+            if(score < 50){
+            document.getElementById('ans').innerHTML = "Grade: F"
+            }
+            else if(score < 60){
+                document.getElementById('ans').innerHTML = "Grade: C"
+            }
+            else if(score < 70){
+                document.getElementById('ans').innerHTML = "Grade: B"
+            }
+            else{
+                document.getElementById('ans').innerHTML = "Grade: A"
+            }
         }
-        else if(score < 60){
-            document.write("C")
-        }
-        else if(score < 70){
-            document.write("B")
-        }
-        else{
-            document.write("A")
-        }
+
     </script>
 </body>
 </html>

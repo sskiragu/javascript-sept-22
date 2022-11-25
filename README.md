@@ -10,6 +10,9 @@
 # Operators
 ## Assignment operator, Comparison operator, arithmetic operator, logical operator, ternary operator
 # Conditions
+## if, if ... else, if ... else if ... else, switch
 # Loops
-## Functions
+## for, while, do ... while
+# Functions
+## without parameters, with parameters, with parameter and return type
 # Shopping cart [https://www.youtube.com/watch?v=YeFzkC2awTM] start 3:34

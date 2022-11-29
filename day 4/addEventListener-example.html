@@ -10,13 +10,12 @@
     <button>Click me</button>
 
     <script>
-        document.querySelector('button').onclick 
-        = alertUser
+        document.querySelector('button')
+            .addEventListener('click', alertUser)
 
-        function alertUser(){
-            alert("You clicked me!")
-        }
-        
+            function alertUser(){
+                alert("You clicked me!")
+            }
     </script>
 </body>
 </html>

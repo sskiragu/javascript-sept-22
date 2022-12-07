@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const posts = [
+            {title: "Good Day", body: "Some text here"},
+            {title: "Good Stuff", body: "Some stuff here"}
+        ]
+
+        function getPosts(){
+            setTimeout(() => {
+                let output = "";
+                posts.map((post) => {
+                    output += `<li>${post.title} : ${post.body}</li>`;
+                });
+                document.body.innerHTML = output;
+            },1000);
+        }
+
+        function createPost(post, callback){
+            setTimeout(() => {
+                posts.push(post);
+                callback();
+            },2000);
+        }
+        createPost({title: "Created a new post", body: "Something good!"}, getPosts);
+        
+    </script>
+</body>
+</html>
